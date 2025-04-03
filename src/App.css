@@ -6,4 +6,5 @@ body {
   overflow-y: hidden; /* Disabilita lo scroll verticale */
   white-space: nowrap; /* Impedisce il ritorno a capo */
   height: 100vh; /* Mantiene il full screen */
+  width: 100vw; /* Mantiene il full screen */
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect, useState } from "react";
+import React, { useRef, useLayoutEffect, useState } from "react"; 
 import {
   motion,
   useScroll,
@@ -148,32 +148,36 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
           className={scrollerClassName}
           style={{ x, ...scrollerStyle }}
         >
-          {spans}
+          {spans.map((span, i) => (
+            <span key={i} className="scroll-text">{span}</span>
+          ))}
         </motion.div>
       </div>
     );
   }
 
+  //  Combiniamo i testi in una singola stringa**
+  const combinedText = texts.map((text, index) => (
+  <span key={index} className="scroll-text">{text}</span>
+));
+
   return (
     <section>
-      {texts.map((text: string, index: number) => (
-        <VelocityText
-          key={index}
-          className={className}
-          baseVelocity={index % 2 !== 0 ? -velocity : velocity}
-          scrollContainerRef={scrollContainerRef}
-          damping={damping}
-          stiffness={stiffness}
-          numCopies={numCopies}
-          velocityMapping={velocityMapping}
-          parallaxClassName={parallaxClassName}
-          scrollerClassName={scrollerClassName}
-          parallaxStyle={parallaxStyle}
-          scrollerStyle={scrollerStyle}
-        >
-          {text}&nbsp;
-        </VelocityText>
-      ))}
+      <VelocityText
+        className={className}
+        baseVelocity={velocity} // Tutti i testi scorrono nella stessa direzione
+        scrollContainerRef={scrollContainerRef}
+        damping={damping}
+        stiffness={stiffness}
+        numCopies={numCopies}
+        velocityMapping={velocityMapping}
+        parallaxClassName={parallaxClassName}
+        scrollerClassName={scrollerClassName}
+        parallaxStyle={parallaxStyle}
+        scrollerStyle={scrollerStyle}
+      >
+        {combinedText}&nbsp;
+      </VelocityText>
     </section>
   );
 };

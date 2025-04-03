@@ -5,12 +5,13 @@
 
 .scroller {
   display: flex;
+  padding: 0.5rem 0;
   white-space: nowrap;
   text-align: center;
   font-family: sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.2em;
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
 }
 
@@ -18,9 +19,14 @@
   flex-shrink: 0;
 }
 
+.scroll-text {
+  padding-right: 20px; /* Spazio tra ogni testo */
+  white-space: nowrap; /* Evita che il testo vada a capo */
+}
+
 @media (min-width: 768px) {
   .scroller {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 1rem;
+    line-height: 1rem;
   }
 }

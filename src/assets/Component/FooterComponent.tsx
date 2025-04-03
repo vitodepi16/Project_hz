@@ -5,7 +5,7 @@ function App  () {
   return (
     <>
       <footer>
-        <FlowingWords texts={["Example text 2"]} velocity={-150}/>
+        <FlowingWords texts={["Footer 1", "Footer 2", "Footer 3", "Footer 4"]} velocity={-150}/>
       </footer>
     </>
   )

@@ -5,7 +5,7 @@ function App  () {
   return (
     <>
       <header>
-        <FlowingWords texts={["Example text 1"]} velocity={150}/>
+        <FlowingWords texts={["Header 1", "Header 2", "Header 3", "Header 4"]} velocity={150}/>
       </header>
     </>
   )
