@@ -1,9 +1,12 @@
 import FlowingWords from './FlowingWords'; // Adjust the path as needed
+import '../Styles/Header.css';
 
 function App  () {
   return (
     <>
-      <FlowingWords texts={["Example text 1"]} velocity={150}/>
+      <header>
+        <FlowingWords texts={["Example text 1"]} velocity={150}/>
+      </header>
     </>
   )
 }
