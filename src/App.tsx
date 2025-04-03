@@ -11,10 +11,13 @@ function App() {
   return (
     <>
     
-    <HeaderComponent/>
-      <CardComponent className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
-        Prova card
-      </CardComponent>
+      <HeaderComponent />
+      <div className="container">
+        <CardComponent className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+          Prova card
+        </CardComponent>
+      </div>
+      
     <FooterComponent/>
     </>
   )
