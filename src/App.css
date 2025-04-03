@@ -18,3 +18,9 @@ body {
   height: 80vh; /* Mantiene il full screen */
   width: 100vw; /* Mantiene il full screen */
 }
+
+.container > * {
+  padding: 1rem;
+  gap: 1rem;
+  height: 50%; /* Ogni figlio prende metà altezza del contenitore */
+}
